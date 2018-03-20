@@ -1,6 +1,6 @@
 const assert = require("assert")
-const { data: users1 } = require("./data/users")
-const { data: users2 } = require("./data/users2")
+const { data: users1, getUserBirthDate: getBirthday1 } = require("./data/users")
+const { data: users2, getUserBirthDate: getBirthday2 } = require("./data/users2")
 const { printAges, changeCurrentDate } = require("./printAges")
 changeCurrentDate(() => Date.parse("03-01-2018"))
 
@@ -19,8 +19,8 @@ function check([ava, james, danielle, darnell]) {
   })
 }
 describe("printAges user data 1", function() {
-  check(printAges(users1))
+    check(printAges(users1, getBirthday1))
 })
 describe("printAges user data 2", function() {
-  check(printAges(users2))
+    check(printAges(users2, getBirthday2))
 })
