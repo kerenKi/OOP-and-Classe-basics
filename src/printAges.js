@@ -1,3 +1,5 @@
+const getUserBirthDate = require('./data/getUserBirthDate')
+
 let currentDate = Date.now
 module.exports.changeCurrentDate = function(newCurrentDate) {
   currentDate = newCurrentDate
@@ -13,7 +15,7 @@ module.exports.printAges = function(users) {
     const { name, dateOfBirth } = user
 
     // We convert each user's date of birth (string) into a number.
-    const birthday = Date.parse(dateOfBirth)
+    const birthday = getUserBirthDate(user)
     
     // How long they've lived in milliseconds.
     const howLongTheyLived = currentDate() - birthday
