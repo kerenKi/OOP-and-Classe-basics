@@ -12,7 +12,7 @@ module.exports.printAges = function(users) {
     // Now we an refer to `user.name` simply as `name`.
     const { name, dateOfBirth } = user
 
-    // We convert each user's date of birth (string) into a number.
+    // Get birth date from user object method.
     const birthday = user.getBirthday()
     
     // How long they've lived in milliseconds.
