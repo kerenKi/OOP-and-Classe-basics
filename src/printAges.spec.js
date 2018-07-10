@@ -10,7 +10,7 @@ describe("printAges", function() {
     assert.equal(ava, "Ava is 27 years old.")
   })
   it(`should say "${james}"`, () => {
-    assert.equal(james, "James is 33 years old.")
+    assert.equal(james, "James is 50 years old.")
   })
   it(`should say "${danielle}"`, () => {
     assert.equal(danielle, "Danielle is 30 years old.")
