@@ -3,12 +3,26 @@ module.exports.changeCurrentDate = function(newCurrentDate) {
   currentDate = newCurrentDate
 }
 
-module.exports.printAges = function(users) {
-  return users.map(user => {
-    const ageDifMs = currentDate() - user.getBirthday()
-    const ageDate = new Date(ageDifMs)
-    return `${user.name} is ${Math.abs(
-      ageDate.getUTCFullYear() - 1970
-    )} years old.`
-  })
+module.exports.printAges = function(users, getBirthday) {
+  const userAgeStrings = []
+  // Loop over the users array using for...of
+  for (let user of users) {
+    // This is called a destructuring assignment.
+    // It unpacks the user properties into new variables.
+    // Now we an refer to `user.name` simply as `name`.
+    const { name, dateOfBirth } = user
+
+    // We convert each user's date of birth (string) into a number.
+    const birthday = user.getBirthday()
+    
+    // How long they've lived in milliseconds.
+    const howLongTheyLived = currentDate() - birthday
+    const unixEpochPlusTheirLifetime = new Date(howLongTheyLived)
+    
+    // Unix epoch is 01-01-1970
+    // Math.abs is used in case they were born before 1970
+    const theirAge = Math.abs(unixEpochPlusTheirLifetime.getUTCFullYear() - 1970)
+    userAgeStrings.push(`${name} is ${theirAge} years old.`)
+  }
+  return userAgeStrings
 }

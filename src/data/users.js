@@ -5,7 +5,7 @@ module.exports.data = [
   },
   {
     name: "James",
-    dateOfBirth: "1985-02-06"
+    dateOfBirth: "1968-02-06"
   },
   {
     name: "Danielle",
@@ -17,6 +17,7 @@ module.exports.data = [
   }
 ]
 
+
 module.exports.getUserBirthDate = function(user) {
-  return new Date(user.dateOfBirth).getTime()
+  return Date.parse(user.dateOfBirth)
 }
