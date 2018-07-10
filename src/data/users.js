@@ -13,7 +13,7 @@ class UserWithBirthday extends User {
 
 module.exports.data = [
   new UserWithBirthday("Ava", "1990-04-01"),
-  new UserWithBirthday("James", "1985-02-06"),
+  new UserWithBirthday("James", "1968-02-06"),
   new UserWithBirthday("Danielle", "1987-09-15"),
   new UserWithBirthday("Darnell", "1982-06-22")
 ]
