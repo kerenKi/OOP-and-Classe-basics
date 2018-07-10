@@ -5,7 +5,7 @@ module.exports.data = [
   },
   {
     name: "James",
-    birthday: 476496000000
+    birthday: -60048000000
   },
   {
     name: "Danielle",
