@@ -10,8 +10,8 @@ function check(output) {
       it('should say "Ava is 27 years old."', () =>
         assert.equal(line, "Ava is 27 years old."))
     } else if (line.startsWith("James")) {
-      it('should say "James is 33 years old."', () =>
-        assert.equal(line, "James is 33 years old."))
+      it('should say "James is 50 years old."', () =>
+        assert.equal(line, "James is 50 years old."))
     } else if (line.startsWith("Danielle")) {
       it('should say "Danielle is 30 years old."', () =>
         assert.equal(line, "Danielle is 30 years old."))

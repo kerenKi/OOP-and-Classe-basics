@@ -10,7 +10,7 @@ module.exports.data = [
   },
   {
     name: "James",
-    dateOfBirth: "1985-02-06",
+    dateOfBirth: "1968-02-06",
     getBirthday
   },
   {
