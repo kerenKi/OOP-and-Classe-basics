@@ -3,13 +3,13 @@ module.exports.changeCurrentDate = function(newCurrentDate) {
   currentDate = newCurrentDate
 }
 
-module.exports.printAges = function(users, getBirthday) {
+module.exports.printAges = (users, getBirthday) => {
   const userAgeStrings = []
   // Loop over the users array using for...of
   for (let user of users) {
     // This is called a destructuring assignment.
     // It unpacks the user properties into new variables.
-    // Now we an refer to `user.name` simply as `name`.
+    // Now we can refer to `user.name` simply as `name`.
     const { name, dateOfBirth } = user
 
     // Extract date of birth using provided function.
