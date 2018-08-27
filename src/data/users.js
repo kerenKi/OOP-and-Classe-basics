@@ -7,7 +7,7 @@ class UserWithBirthday extends User {
     this.dateOfBirth = birthday
   }
   getBirthday() {
-    return new Date(this.dateOfBirth).getTime()
+    return Date.parse(this.dateOfBirth)
   }
 }
 
