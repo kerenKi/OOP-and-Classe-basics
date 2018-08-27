@@ -1,5 +1,5 @@
 function getBirthday() {
-  return new Date(this.dateOfBirth).getTime()
+  return Date.parse(this.dateOfBirth)
 }
 
 module.exports.data = [
