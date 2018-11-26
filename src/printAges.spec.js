@@ -25,5 +25,9 @@ function check(output) {
   })
 }
 describe("printAges", function() {
-  check(printAges(users1.concat(users2)))
+  try {
+    check(printAges(users1.concat(users2)))
+  } catch(err) {
+    it('should not throw an error', () => {throw err})
+  }
 })
