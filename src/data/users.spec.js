@@ -3,11 +3,10 @@ const assert = require("assert")
 describe("userClass", function() {
   it("userClass should be a constructor", () => {
     const userClass = require("./userClass")
-    assert.equal(typeof userClass, "function", "The type of userClass should be a 'function' in order to be usable as a constructor")
+    assert.equal(typeof userClass, "function", "The type of userClass module's export should be 'function' in order to be usable as a constructor. Use the ES6 class notation.")
     describe("users data 1", function() {
       it("is complete/valid", () => {
         const userData1 = require("./users").data
-        const userData2 = require("./users2").data
         userData1.forEach(user => {
           sharedChecks(user)
           assert.ok(
@@ -20,7 +19,6 @@ describe("userClass", function() {
     
     describe("users data 2", function() {
       it("is complete/valid", () => {
-        const userData1 = require("./users").data
         const userData2 = require("./users2").data
         userData2.forEach(user => {
           sharedChecks(user)
