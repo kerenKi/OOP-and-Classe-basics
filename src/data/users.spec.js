@@ -27,6 +27,7 @@ describe("users data 2", function() {
 })
 
 function sharedChecks(user) {
+  assert.notStrictEqual(user.constructor, Object, "the user object " + JSON.stringify(user) + " was not created using a constructor")
   assert.ok(user.name, "user name property should be a non-empty string")
   assert.ok(user.getBirthday, "the user object " + JSON.stringify(user) + " is missing a getBirthday function")
   assert.equal(typeof user.getBirthday, "function", "the user object " + JSON.stringify(user) + " has a getBirthday property, but it's not a function")
