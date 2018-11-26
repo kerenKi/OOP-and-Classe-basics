@@ -25,5 +25,7 @@ function check(output) {
   })
 }
 describe("printAges", function() {
-  check(printAges(users1.concat(users2)))
+  it('given correct users', () => {
+    check(printAges(users1.concat(users2)))
+  })
 })
