@@ -1,26 +1,15 @@
-function getBirthday() {
-  return Date.parse(this.dateOfBirth)
+function user(name,dateOfBirth){
+  this.name = name
+  this.dateOfBirth = dateOfBirth
+  this.getBirthday = function() {
+    return Date.parse(this.dateOfBirth)
+  }
 }
 
+
 module.exports.data = [
-  {
-    name: "Ava",
-    dateOfBirth: "1990-04-01",
-    getBirthday
-  },
-  {
-    name: "James",
-    dateOfBirth: "1968-02-06",
-    getBirthday
-  },
-  {
-    name: "Danielle",
-    dateOfBirth: "1987-09-15",
-    getBirthday
-  },
-  {
-    name: "Darnell",
-    dateOfBirth: "1982-06-22",
-    getBirthday
-  }
+  new user("Ava", "1990-04-01"),
+  new user("James","1968-02-06"),
+  new user("Danielle","1987-09-15"),
+  new user("Darnell","1982-06-22"),
 ]
