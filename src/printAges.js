@@ -14,6 +14,7 @@ module.exports.printAges = (users) => {
 
     // Get birth date from user object method.
     const birthday = user.getBirthday()
+    console.log("birthday: ", birthday)
     
     // How long they've lived in milliseconds.
     const howLongTheyLived = currentDate() - birthday
