@@ -1,4 +1,4 @@
-const getUserBirthDate = require('./data/getUserBirthDate')
+const getUserBirthDate = require('./getUserBirthDate')
 
 let currentDate = Date.now
 module.exports.changeCurrentDate = function(newCurrentDate) {
