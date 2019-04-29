@@ -1,9 +1,8 @@
 const User = require('./userClass')
 
 class UserWithBirthday extends User {
-  constructor(name, birthday) {
-    super()
-    this.name = name
+  constructor(name,birthday) {
+    super(name)
     this.dateOfBirth = birthday
   }
   getBirthday() {
