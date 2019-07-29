@@ -18,7 +18,6 @@ module.exports.data = [
 ]
 
 module.exports.getUserBirthDate = function(user) {
-  console.log("users.js file",user)//TODO
   const numberedBirthday = Date.parse(user.dateOfBirth)
   return numberedBirthday
 }

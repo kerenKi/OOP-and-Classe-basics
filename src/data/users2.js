@@ -18,7 +18,5 @@ module.exports.data = [
 ]
 
 module.exports.getUserBirthDate = function(user) {
-  console.log("users2.js file",user)//TODO
   return user.birthday
-  
 }
