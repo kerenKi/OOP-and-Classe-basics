@@ -1,9 +1,13 @@
 const assert = require("assert")
 
 describe("userClass", function() {
-  it("userClass should be a constructor", () => {
-    const userClass = require("./userClass")
-    assert.equal(typeof userClass, "function", "The type of userClass module's export should be 'function' in order to be usable as a constructor. Use the ES6 class notation.")
+  const User = require("./userClass")
+  it("User Class should have property of name", () => {
+    const Dave = new User('Dave')
+    assert.ok(Dave.name === 'Dave',"User class should have a name property in the constructor")
+  })
+  it("User Class should be a constructor", () => {
+    assert.equal(typeof User, "function", "The type of userClass module's export should be 'function' in order to be usable as a constructor. Use the ES6 class notation.")
     describe("users data 1", function() {
       it("is complete/valid", () => {
         const userData1 = require("./users").data
