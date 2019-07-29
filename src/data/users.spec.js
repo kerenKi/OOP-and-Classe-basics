@@ -12,6 +12,14 @@ describe("users data 1", function() {
       )
     })
   })
+
+  it("getBirthday function returns DateOfBirth in UNIX form", () => {
+    userData1.forEach(user => {
+      assert.ok(
+        Date.parse(user.dateOfBirth) === user.getBirthday() , "The function getBirthday does not parse the string"
+      )
+    })
+  })
 })
 
 describe("users data 2", function() {
@@ -24,6 +32,14 @@ describe("users data 2", function() {
       )
     })
   })
+
+  it("getBirthday function returns user birthday", () => {
+    userData2.forEach( user => {
+      assert.ok(
+        user.birthday === user.getBirthday(), "function getBirthday shuold return the user birthday "
+      )
+    })
+  })  
 })
 
 function sharedChecks(user) {
