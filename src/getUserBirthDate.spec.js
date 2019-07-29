@@ -12,10 +12,8 @@ describe("get user birthdate", function () {
             )
         })
     })
-})
 
-describe("get user birthdate", function () {
-    it("data 1 is in unix format", () => {
+    it("data 1 is parsed to unix format", () => {
         userData1.forEach(user => {
             assert.ok(
                 Date.parse(user.dateOfBirth) === getUserBirthday(user),
